@@ -1,0 +1,48 @@
+/* Navbar container */
+.navbar {
+  background-color: #0a66c2; /* LinkedIn blue */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Brand / Logo */
+.navbar h1 {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* Right side container */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Greeting */
+.navbar-right span {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* Logout button */
+.navbar-right button {
+  background-color: white;
+  color: #0a66c2;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar-right button:hover {
+  background-color: #f2f2f2;
+}

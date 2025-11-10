@@ -1,0 +1,99 @@
+/* Overall page background */
+.feed-page {
+  background-color: #f3f6f8;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9fafb;
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+}
+
+/* Center the feed content */
+.feed-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+}
+
+/* Posts List */
+.posts-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Post Card */
+.post-card {
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 16px 20px;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header h2 {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Post Text */
+.post-card p {
+  font-size: 1rem;
+  color: #444;
+  margin: 8px 0;
+}
+
+/* Timestamp */
+.timestamp {
+  font-size: 0.85rem;
+  color: #888;
+  text-align: right;
+  margin-top: 5px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.delete-btn:hover {
+  color: #d63031;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feed-container {
+    width: 90%;
+    margin-top: 60px;
+  }
+
+  .post-card {
+    padding: 14px;
+  }
+
+  .post-header h2 {
+    font-size: 1rem;
+  }
+}
