@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import api from "../api";
 import "./Createpost.css"; // import the CSS
 
 const Createpost = ({ refreshPosts }) => {
@@ -11,8 +11,8 @@ const Createpost = ({ refreshPosts }) => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.post(
-        "http://localhost:5000/api/posts",
+      await api.post(
+        "/posts",
         { text },
         { headers: { Authorization: `Bearer ${token}` } }
       );

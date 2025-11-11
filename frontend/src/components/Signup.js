@@ -48,7 +48,7 @@ function Signup() {
           <input
             type="email"
             name="email"
-            placeholder="Email or phone number"
+            placeholder="Email"
             value={formData.email}
             onChange={handleChange}
             required

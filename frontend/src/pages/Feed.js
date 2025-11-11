@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Createpost from "../components/Createpost";
-import axios from "axios";
 import "./Feed.css";
+import api from "../api";
 
 function Feed() {
   const [posts, setPosts] = useState([]);
@@ -11,7 +11,7 @@ function Feed() {
   // Fetch posts
   const fetchPosts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/posts");
+      const res = await api.get("/posts");
       setPosts(res.data);
     } catch (err) {
       console.error(err);
@@ -34,7 +34,7 @@ function Feed() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/posts/${postId}`, {
+      await api.delete(`/posts/${postId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
 
