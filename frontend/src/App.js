@@ -5,7 +5,7 @@ import Login from "./components/Login";
 import Feed from "./pages/Feed";
 
 const App = () => {
-  const token = localStorage.getItem("token");
+
 
   return (
     <Router>
@@ -13,10 +13,10 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route
-          path="/feed"
-          element={token ? <Feed /> : <Navigate to="/login" />}
-        />
-        <Route path="*" element={<Navigate to={token ? "/feed" : "/login"} />} />
+            path="/feed"
+            element={localStorage.getItem("token") ? <Feed /> : <Navigate to="/login" />}
+          />
+          <Route path="*" element={<Navigate to={localStorage.getItem("token") ? "/feed" : "/login"} />} />
       </Routes>
     </Router>
   );
